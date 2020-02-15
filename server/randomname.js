@@ -1,12 +1,5 @@
 'use strict';
 
-var ADJECTIVES = [
-  'Abrasive', 'Brash', 'Callous', 'Daft', 'Eccentric', 'Fiesty', 'Golden',
-  'Holy', 'Ignominious', 'Joltin', 'Killer', 'Luscious', 'Mushy', 'Nasty',
-  'OldSchool', 'Pompous', 'Quiet', 'Rowdy', 'Sneaky', 'Tawdry',
-  'Unique', 'Vivacious', 'Wicked', 'Xenophobic', 'Yawning', 'Zesty'
-];
-
 var FIRST_NAMES = [
   'Anna', 'Bobby', 'Cameron', 'Danny', 'Emmett', 'Frida', 'Gracie', 'Hannah',
   'Isaac', 'Jenova', 'Kendra', 'Lando', 'Mufasa', 'Nate', 'Owen', 'Penny',
@@ -28,7 +21,5 @@ function randomItem(array) {
 }
 
 module.exports = function randomName() {
-  return randomItem(ADJECTIVES) +
-    randomItem(FIRST_NAMES) +
-    randomItem(LAST_NAMES);
+  return randomItem(FIRST_NAMES) + ' ' + randomItem(LAST_NAMES);
 };
